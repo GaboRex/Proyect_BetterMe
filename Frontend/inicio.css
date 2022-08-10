@@ -1,0 +1,41 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+}
+p{
+    text-align: center;
+    background-color: white;
+    margin: 0;
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+h3{
+    border: white 2px solid;
+    margin-left: 45%;
+    margin-right: 45%;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+}
+h3:hover {
+    color: black;
+    opacity: 10;
+    background-color: coral;
+  }
+a{
+    margin: 50px 20px;
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+}
+#inicio{
+    color: green;
+    text-decoration: none;
+}
+a:hover{
+    color: green;
+}
