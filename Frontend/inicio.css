@@ -39,3 +39,12 @@ a{
 a:hover{
     color: green;
 }
+.botonicio{
+    text-align: center;
+    color: coral;
+    cursor: pointer;
+}
+.botenetro{
+    background-color: coral;
+    font-family: 'Roboto', sans-serif;
+}
