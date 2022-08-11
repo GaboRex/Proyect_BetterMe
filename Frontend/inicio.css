@@ -36,15 +36,17 @@ a{
     color: green;
     text-decoration: none;
 }
-a:hover{
+.botenetro:hover{
     color: green;
 }
 .botonicio{
     text-align: center;
-    color: coral;
     cursor: pointer;
 }
 .botenetro{
     background-color: coral;
     font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    width: 20vh;
+    padding: 10px 18px;
 }
