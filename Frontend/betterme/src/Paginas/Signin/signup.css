@@ -1,7 +1,6 @@
 /* Bordered form */
 form {
-    border: 3px solid #f1f1f1;
-    width: 100vw;
+    width: 98vw;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -13,7 +12,7 @@ form {
     font-size: 50px;
     font-family: 'Roboto', sans-serif;
     width: 100%;
-    height: 100px;
+    margin: -5vh 0 15vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,7 +31,8 @@ form {
     }
 
     .greenButton{
-        text-align: center;
+      margin: 2vh 0 2vh;
+      text-align: center;
       }
     
     .footer{
