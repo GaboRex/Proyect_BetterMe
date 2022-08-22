@@ -1,27 +1,30 @@
 require('dotenv').config()
-const mysql = require("mysql");
-//TODO: change to Environment variables
-const connection = mysql.createConnection({
-  host: process.env.HOST,
-  user: process.env.USER,
-  password: process.env.PASSWORD,
-  database: process.env.DATABASE,
-});
 
-connection.connect(function (err) {
-  if (err) {
-    return console.error("error: " + err.message);
-  }
-  console.log("Connected to the MySQL server.");
-});
+let mysql = require('mysql')
 
-// Create a pool connection
-const pool = mysql.createPool({
-  connectionLimit: 10,
-  host: process.env.HOST,
-  user: process.env.USER,
-  password: process.env.PASSWORD,
-  database: process.env.DATABASE,
-});
+//TODO change config file to environment variable
 
-module.exports = connection;
+let connection = mysql.createConnection({
+    host: process.env.HOST,
+    user: process.env.USER,
+    password: process.env.PSWR,
+    database: process.env.DATABASE
+})
+
+connection.connect(function(err) {
+    if (err) {
+      return console.error('error: ' + err.message);
+    }
+  
+    console.log('Connected to the MySQL server.');
+  });
+
+  const pool = mysql.createPool({
+    connectionLimit: 10,
+    host: process.env.HOST,
+    user: process.env.USER,
+    password: process.env.PSWR,
+    database: process.env.DATABASE
+})
+
+module.exports = connection
