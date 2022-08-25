@@ -12,7 +12,7 @@ form {
   font-size: 50px;
   font-family: 'Roboto', sans-serif;
   width: 100%;
-  margin: -30vh 0 15vh;
+  margin: -50vh 0 15vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,7 +87,7 @@ form {
   span.psw {
     float: right;
     padding-top: 16px;
-    font-size: auto;
+    font-size: 5px;
   }
   
   /* Change styles for span and cancel button on extra small screens */

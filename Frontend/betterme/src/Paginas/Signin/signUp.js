@@ -1,53 +1,54 @@
 import './signup.css';
 import {Link} from "react-router-dom";
 import React, { useState } from 'react';
+import Axios from 'axios'
 
 function App() {
 
-const [name, setName] = useState('')
-const [lastName, setLastName] = useState('')
+const [nombre, setNombre] = useState('')
+const [apellido, setApellido] = useState('')
 const [username, setUsername] = useState('')
 const [password, setPassword] = useState('')
 
-const checkPassword = (verification) => {
-  if(verification === password) {
-    doLogin()
-  } else {
+const register = () => {
+  Axios.post('http://localhost:3000/signup/register', {
+    nombre: nombre,
+    apellido: apellido,
+    username: username,
+    password: password
     
-  }
-}
-
-const doLogin = (password) => {
-
+  }).then((response) => {
+    console.log(response)
+  })
 }
 
   return (
-    <div>
-    <form action="action_page.php" method="post"> 
-      <div class="container">
-        <h1 class="header">REGISTRARSE</h1>
-        <label for="name"><b>Nombre</b></label>
-        <input type="text" placeholder="Ingrese su nombre" name="uname" value={name} onChange={ (event) => { setName(event.target.value)}} required/>
+    <div className='App'>
+    <form> 
+      <div className="container">
+        <h1 className="header">REGISTRARSE</h1>
+        <label htmlFor="name"><b>Nombre</b></label>
+        <input type="text" placeholder="Ingrese su nombre" value={nombre} onChange={ (e) => { setNombre(e.target.value)}} required/>
 
-        <label for="lname"><b>Apellido</b></label>
-        <input type="text" placeholder="Ingrese su apellido" name="uname" value={lastName} onChange={ (event) => { setLastName(event.target.value)}} required/>
+        <label htmlFor="lname"><b>Apellido</b></label>
+        <input type="text" placeholder="Ingrese su apellido" value={apellido} onChange={ (e) => { setApellido(e.target.value)}} required/>
 
-        <label for="uname"><b>Nombre de usuario</b></label>
-        <input type="text" placeholder="Ingrese su nombre de usuario" name="uname" value={username} onChange={ (event) => { setUsername(event.target.value)}} required/>
+        <label htmlFor="uname"><b>Nombre de usuario</b></label>
+        <input type="text" placeholder="Ingrese su nombre de usuario" value={username} onChange={ (e) => { setUsername(e.target.value)}} required/>
 
-        <label for="psw"><b>Contraseña</b></label>
-        <input type="password" placeholder="Ingrese su contraseña" name="psw" value={password} onChange={ (event) => { setPassword(event.target.value)}} required/>
+        <label htmlFor="psw"><b>Contraseña</b></label>
+        <input type="password" placeholder="Ingrese su contraseña" value={password} onChange={ (e) => { setPassword(e.target.value)}} required/>
 
-        <label for="psw"><b>Confirmar contraseña</b></label>
-        <input type="password" placeholder="Ingrese su contraseña nuevamente" name="psw" required/>
+        <label htmlFor="psw"><b>Confirmar contraseña</b></label>
+        <input type="password" placeholder="Ingrese su contraseña nuevamente" required/>
 
-        <div class="greenButton">
-        <button type="submit">Registrarse</button>
+        <div className="greenButton">
+        <button onClick={register}>Registrarse</button>
         </div>
 
-        <div class="footer">
-        <Link to = "/login">
-          <button type="button" class="cancelbtn">Cancelar</button>
+        <div className="footer">
+        <Link to = "/signin">
+          <button type="button" className="cancelbtn">Cancelar</button>
         </Link>
         </div>
       </div>
