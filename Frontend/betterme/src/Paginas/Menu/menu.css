@@ -1,0 +1,43 @@
+.Menu{
+    background-image: url(mikeron.jpeg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.actividades{
+    text-align: center;
+}
+h10{
+    text-align: center;
+    font-size: xx-large;
+    color: black;
+    width: 50px;
+}
+img{
+    height: 350px;
+    width: 300px;
+    /* margin: auto; */
+}
+.parce{
+    display: inline-block;
+    margin: 90px;
+    text-align: center;
+}
+h11{
+    text-align: center;
+    font-size: x-large;
+    color: black;
+}
+button {
+    background-color: rgb(50, 50, 215);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 18px;
+    margin: 0px 130px;
+    font-size: large;
+}
+button:hover{
+    background-color: blue;
+}
