@@ -10,10 +10,11 @@ const findAll = () => {
     });
   });
 };
+/*
 
-const findById = (codigo) => {
+const findById = (id) => {
   return new Promise((resolve, reject) => {
-    sql.query(`SELECT * FROM cliente WHERE codigo = ${codigo}`, (err, res) => {
+    sql.query(`SELECT * FROM cliente WHERE codigo`, (err, res) => {
       if (err) {
         reject(err);
       }
@@ -21,5 +22,5 @@ const findById = (codigo) => {
     });
   });
 };
-
-module.exports = { findAll, findById };
+*/
+module.exports = { findAll  }; //, findById
