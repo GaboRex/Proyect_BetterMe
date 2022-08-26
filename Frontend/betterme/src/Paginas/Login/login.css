@@ -1,18 +1,30 @@
 /* Bordered form */
 form {
-  border: 3px solid #fff;
   width: 100vw;
-  height: 100vh;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
 }
-
+.login{
+  background-image: url(pantallaLogIn.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  border: none;
+  height: 900px;
+  /* position: absolute; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .header{
   font-size: 50px;
   font-family: 'Roboto', sans-serif;
   width: 100%;
-  margin: -50vh 0 15vh;
+  /* margin: -50vh 0 15vh; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,7 +92,15 @@ form {
   .container {
     padding: 64px;
     font-family: 'Roboto', sans-serif;
-   width: 50%; 
+   width: 10px;
+   height: 600px;
+   justify-content: center; 
+   align-content: center;
+   display: flex;
+   background-color: coral;
+   /* position: absolute;
+   top: 500px;
+   transform: translateY(-50%); */
   }
   
   /* The "Forgot password" text */

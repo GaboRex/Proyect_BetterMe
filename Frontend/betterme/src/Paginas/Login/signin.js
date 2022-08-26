@@ -27,7 +27,7 @@ function Login() {
   }
 
     return(
-      <div>
+      <div className="login">
 <form method="post">
     <div className = "container">
       <h1 className = "header">INICIAR SESION</h1>
