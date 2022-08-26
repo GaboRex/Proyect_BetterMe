@@ -1,5 +1,5 @@
 .Menu{
-    background-image: url(mikeron.jpeg);
+    background-image: url(degradeMenu.png);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -11,7 +11,7 @@
 h10{
     text-align: center;
     font-size: xx-large;
-    color: black;
+    color: white;
     width: 50px;
 }
 img{

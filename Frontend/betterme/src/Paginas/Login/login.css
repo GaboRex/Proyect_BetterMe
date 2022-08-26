@@ -97,7 +97,7 @@ form {
    justify-content: center; 
    align-content: center;
    display: grid;
-   background-color: coral;
+   background-color: white;
    position: absolute;
    top: 350px;
    transform: translateY(-40%);
