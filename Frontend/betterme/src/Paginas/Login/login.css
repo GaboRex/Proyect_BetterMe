@@ -90,17 +90,17 @@ form {
   
   /* Add padding to containers */
   .container {
-    padding: 64px;
+    padding: 640px;
     font-family: 'Roboto', sans-serif;
    width: 10px;
    height: 600px;
    justify-content: center; 
    align-content: center;
-   display: flex;
+   display: grid;
    background-color: coral;
-   /* position: absolute;
-   top: 500px;
-   transform: translateY(-50%); */
+   position: absolute;
+   top: 350px;
+   transform: translateY(-40%);
   }
   
   /* The "Forgot password" text */
