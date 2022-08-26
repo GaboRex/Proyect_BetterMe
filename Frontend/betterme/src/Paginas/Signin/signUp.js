@@ -43,7 +43,9 @@ const register = () => {
         <input type="password" placeholder="Ingrese su contraseña nuevamente" required/>
 
         <div className="greenButton">
+          <Link to="/menu">
         <button onClick={register}>Registrarse</button>
+        </Link>
         </div>
 
         <div className="footer">

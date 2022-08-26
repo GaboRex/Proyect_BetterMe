@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from "react-router-dom";
-// import './menu.css';
+import './menu.css';
 import dietaImage from './dieta.jpeg';
 import pesasSinDuenio from './pesasSinDuenio.jpeg';
 import seniorJalando from './seniorJalando.jpeg';
