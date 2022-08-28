@@ -9,7 +9,7 @@ import Menu from './Paginas/Menu/menu';
 
 function App() {
   return (
-    <div classname='App'>
+    <div className='App'>
       <Routes>
         <Route path='/' element={<Init/>} />
         <Route path='/signup' element={<Signup/>} />
