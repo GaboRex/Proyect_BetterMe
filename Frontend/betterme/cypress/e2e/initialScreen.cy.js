@@ -1,4 +1,4 @@
-describe('empty spec', () => {
+describe('Testing inital screen & aboutUs', () => {
   beforeEach('go to BetterMe app', () => {
     cy.visit('localhost:3000')
   })
