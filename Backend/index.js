@@ -9,7 +9,7 @@
 // })
 
 const express = require('express')
-const mysql = require('mysql2')
+const mysql = require('mysql')
 const cors = require('cors')
 const app = express()
 
@@ -19,7 +19,7 @@ app.use(cors())
 const db = mysql.createConnection({
     user: "root",
     host: "localhost",
-    password: "copacopa",
+    password: "Alpha 627",
     database: "cliente"
 })
 
@@ -36,7 +36,7 @@ app.post('/signup/register', (req, res) => {
     })
 })
 
-app.post('/signin', (req, res) => {
+app.post('/signin/login', (req, res) => {
     const username = req.body.username
     const password = req.body.password
 

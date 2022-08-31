@@ -12,7 +12,7 @@ function Login() {
   const [loginStatus, setLoginStatus] = useState('')
 
   const login = () => {
-    Axios.post('http://localhost:3000/signin', {
+    Axios.post('http://localhost:3000/signin/login', {
       username: username, 
       password: password
     }).then((response) => {
@@ -28,7 +28,7 @@ function Login() {
 
     return(
       <div className="login">
-<form method="post">
+<form>
     <div className = "container">
       <h1 className = "header">INICIAR SESION</h1>
       <label><b>Nombre de usuario</b></label>
