@@ -8,7 +8,12 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-
+*{
+    -ms-overflow-style: none;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
 .images{
     
     scale: auto;
@@ -47,10 +52,6 @@ a{
     text-decoration: none;
     color: black;
 }
-#inicio{
-    color: green;
-    text-decoration: none;
-}
 
 .botonicio{
     text-align: center;
@@ -72,4 +73,5 @@ a{
 .botenetro:hover{
     color: black;
     border-color: black;
+    background-color: white;
 }
