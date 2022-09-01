@@ -17,10 +17,10 @@ app.use(express.json())
 app.use(cors())
 
 const db = mysql.createConnection({
-    user: "root",
-    host: "localhost",
-    password: "copacopa",
-    database: "cliente"
+    host:'us-cdbr-east-06.cleardb.net',
+    user: 'b5fb25eeb450c7',
+    password: '498704be',
+    database: 'heroku_64c056bb055525b',
 })
 
 app.post('/signup/register', (req, res) => {

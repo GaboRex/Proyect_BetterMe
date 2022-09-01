@@ -5,10 +5,12 @@ let mysql = require('mysql')
 //TODO change config file to environment variable
 
 let connection = mysql.createConnection({
-    host: process.env.HOST,
-    user: process.env.USER,
-    password: process.env.PSWR,
-    database: process.env.DATABASE
+    host:'us-cdbr-east-06.cleardb.net',
+    user: 'b5fb25eeb450c7',
+    password: '498704be',
+    database: 'heroku_64c056bb055525b',
+
+
 })
 
 connection.connect(function(err) {
@@ -19,12 +21,6 @@ connection.connect(function(err) {
     console.log('Connected to the MySQL server.');
   });
 
-  const pool = mysql.createPool({
-    connectionLimit: 10,
-    host: process.env.HOST,
-    user: process.env.USER,
-    password: process.env.PSWR,
-    database: process.env.DATABASE
-})
+
 
 module.exports = connection
