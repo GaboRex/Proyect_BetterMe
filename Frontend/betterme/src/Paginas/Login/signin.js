@@ -28,8 +28,9 @@ function Login() {
 
     return(
       <div className="login">
-<form>
-    <div className = "container">
+        <div className="parce4">
+    <form>
+    <div className = "containerrr">
       <h1 className = "header">INICIAR SESION</h1>
       <label><b>Nombre de usuario</b></label>
       <input type="text" placeholder="Ingrese nombre de usuario" onChange={(e) => {
@@ -63,6 +64,7 @@ function Login() {
       </div>
     </div>
     </form>
+    </div>
     <h1>{loginStatus}</h1>
     </div>
     )

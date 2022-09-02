@@ -24,7 +24,7 @@ const hash = (string) => {
 const db = mysql.createConnection({
     user: "root",
     host: "localhost",
-    password: "Alpha 627",
+    password: "copacopa",
     database: "cliente"
 })
 

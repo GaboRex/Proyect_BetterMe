@@ -87,19 +87,25 @@ form {
     width: 40%;
     border-radius: 50%;
   }
-  
+  .parce4{
+    display: inline-block;
+    margin: 80px;
+    position: absolute;
+    top: -10%;
+    padding: 53px;
+  }
   /* Add padding to containers */
-  .container {
-    padding: 640px;
+  .containerrr {
+    padding: 440px;
     font-family: 'Roboto', sans-serif;
    width: 10px;
-   height: 600px;
+   height: 200px;
    justify-content: center; 
    align-content: center;
    display: grid;
    background-color: white;
    position: absolute;
-   top: 350px;
+   top: 100px;
    transform: translateY(-40%);
   }
   
