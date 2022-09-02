@@ -45,7 +45,9 @@ function Login() {
           />
 
       <div className="greenButton">
+      <Link to = "/menu">
       <button onClick={login}><b>Iniciar Sesión</b></button>
+      </Link>
       </div>
 
       <div className="footer">

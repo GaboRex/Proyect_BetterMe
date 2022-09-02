@@ -32,7 +32,7 @@ const register = () => {
   return (
     <div className='App'>
       <div className="parce2">
-      <img src={registro1}/>
+      <img className="imgr2" src={registro1}/>
       </div>
       <div className="parce1">
       <img className="imgr1" src={registro2}/>

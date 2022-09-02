@@ -1,9 +1,9 @@
 import React from 'react'
 import {Link} from "react-router-dom";
 import './menu.css';
-import dietaImage from './dieta.jpeg';
-import pesasSinDuenio from './pesasSinDuenio.jpeg';
-import seniorJalando from './seniorJalando.jpeg';
+import menuCrearRutina from './menuCrearRutina.png';
+import menuDieta from './menuDieta.png';
+import menuEjercicios from './menuEjercicios.png';
 
 const Menu = () => {
     return(
@@ -14,7 +14,7 @@ const Menu = () => {
         <h10><b>Actividades</b></h10>
         </div>
         <div className="parce">
-        <img src={pesasSinDuenio}/>
+        <img src={menuEjercicios}/>
         <div>
             <h11><b>Ejercicios recomendados</b></h11>
             </div>
@@ -23,7 +23,7 @@ const Menu = () => {
             </Link>
         </div>
         <div className="parce">
-            <img src={seniorJalando}/>
+            <img src={menuCrearRutina}/>
             <div>
             <h11><b>Crear tu rutina</b></h11>
             </div>
@@ -32,12 +32,13 @@ const Menu = () => {
             </Link>
         </div>
         <div className="parce">
-            <img src={dietaImage}/>
+            <img src={menuDieta}/>
             <div>
             <h11><b>Dieta saludable</b></h11>
             </div>
             <button type="button">IR</button>
         </div>
+        <br/><br/><br/><br/><br/>
         </div>
     )
 }
