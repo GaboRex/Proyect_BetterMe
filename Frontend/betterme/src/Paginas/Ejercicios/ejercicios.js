@@ -16,7 +16,9 @@ const Ejercicios = () => {
             <div className="container">
             <img src={brazos}/>
             <h3 className="pab">BRAZOS</h3>
+            <Link to = "/brazos">
             <button className="btn">IR</button>
+            </Link>
             </div>
             <div className="container1">
             <img src={piernas}/>

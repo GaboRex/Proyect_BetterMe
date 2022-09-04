@@ -1,0 +1,80 @@
+.Mostrar{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to right, #67F1C8, #FBF3B2);
+    background-size: cover;
+
+}
+
+.descripcionE{
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: auto;
+    width: 550px;
+    height: 400px;
+    padding: 4.5em 3em;
+    border-radius:10px;
+    position: relative;
+    left: 300px;
+    top: 50px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nombreDE{
+    color: black;    
+}
+
+.tituloE{
+    width: 550px;
+    height: 200px;
+    position: relative;
+    left: -1px;
+    top: -90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.informacionE{
+    
+    width: 450px;
+    height: 200px;
+    position: relative;
+    top: -60px;
+    left: 60px;
+    align-items: center;
+}
+
+.btn_atras{
+    width: 60%;
+    position: relative;
+    left: 155px;
+    top: -50px;
+
+}
+
+.btnAtras{
+    background-color: #54BF9D;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 8px;
+    position: relative;
+}
+.btnAtras:hover{
+    background-color: aquamarine;
+}
+
+.imagenEjercicio{
+    width: 70%;
+    border-radius: 10px;
+
+}
+
+.imagenE{
+    position: absolute;
+    top: 200px;
+    left: 20px;
+
+}
