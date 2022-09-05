@@ -1,66 +1,14 @@
-// const express = require('express')
-// const routes = require('./src/routes')
-// const app = express()
+const express = require('express');
+const routes = require('./src/routes');
+const app = express();
+const cors = require('cors');
 
-// app.use('/api', routes)
+app.use(cors());
 
-// app.listen(3000, () => {
-//     console.log('Happy Codding the app listening on port 3000!')
-// })
-
-const express = require('express')
-const mysql = require('mysql')
-const cors = require('cors')
-const app = express()
-const { createHash } = require('crypto')
-
-app.use(express.json())
-app.use(cors())
-
-const hash = (string) => {
-    return createHash('sha256').update(string).digest('hex')
-}
-
-const db = mysql.createConnection({
-    user: "root",
-    host: "localhost",
-    password: "Alpha 627",
-    database: "cliente"
-})
-
-app.post('/signup/register', (req, res) => {
-
-    const nombre = req.body.nombre
-    const apellido = req.body.apellido
-    const username = req.body.username
-    const passwordNotEncrypted = req.body.password
-    const passwordEncrypted = hash(passwordNotEncrypted)
-
-    db.query("INSERT INTO usuario (nombre, apellido, username, password) VALUES (?,?,?,?)",
-    [nombre, apellido, username, passwordEncrypted], (err, result) => {
-        console.log(err)
-    })
-})
-
-app.post('/signin/login', (req, res) => {
-    const username = req.body.username
-    const passwordNotEncrypted = req.body.password
-    const passwordEncrypted = hash(passwordNotEncrypted)
-
-    db.query("SELECT * FROM usuario WHERE username = ? AND password = ?",
-    [username, passwordEncrypted], 
-    (err, result) => {
-        if(err) {
-            res.send({ err: err })
-        } 
-        if (result.length > 0) {
-            res.send(result)
-        } else {
-            res.send({ message: 'Wrong username/password combination'})
-        }
-    })
-})
+app.use(express.json());
+app.use('/api', routes);
 
 app.listen(5000, () => {
-    console.log('Server started on port 5000')
-})
+    
+    console.log('Betterme server started on port 5000');
+});

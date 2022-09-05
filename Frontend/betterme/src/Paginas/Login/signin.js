@@ -44,7 +44,7 @@ function Login() {
           />
 
       <div className="greenButton">
-      <button onClick={login}><b>Iniciar Sesión</b></button>
+      <button onClick={login}>Iniciar Sesión</button>
       </div>
 
       <div className="footer">
