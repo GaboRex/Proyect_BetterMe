@@ -1,0 +1,94 @@
+/* Bordered form
+@font-face {
+  font-family: 'Helvetica Bold';
+  src: url(Helvetica-Bold-Font.ttf);
+} */
+
+
+.Login{
+  background-image: url(pantallaLogIn.png);
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.iniSe{
+  font-family: "Helvetica Bold";
+  font-size: 35px;
+  color: black;
+}
+
+.form1{
+  background-color: rgba(255, 255, 255, 0.6);
+  margin: auto;
+  width: 500px;
+  height: 400px;
+  padding: 4.5em 3em;
+  border-radius:10px;
+  text-align: center;
+}
+
+.form_container{
+  margin-top: 3em;
+  display: grid;
+  gap: 2.5em;
+}
+
+.form_group{
+  position: relative;
+  --color: black;
+}
+
+.form_input{
+  width: 250px;
+  background: none;
+  color: black;
+  padding: .6em .3em;
+  border: none;
+  outline: none; 
+  border-bottom: 1px solid var(--color);
+}
+
+.form_input.focus + .form_label,
+.form_input:not(.placheholder-shown) + .form_label{
+  transform: translateY(-12px) scale(.7);
+  transform-origin: left top;
+  color: black;
+  font-size: 22px;
+}
+.form_label{
+  color: black;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 120px;
+  transform: translateY(10px);
+  transition: transform .5s, color .3s;
+}
+
+.btn_cancelar{
+  padding: 10px 24px;
+  background-color: #ff4040;
+  border: none;
+  margin-right: 20px;
+  color: white;
+}
+
+.btn_iniSe{
+  padding: 10px 24px;
+  background: radial-gradient(circle, #cf2066, #27d6ae);
+  border:none;
+  margin-right: 20px;
+}
+
+.btn_crear{
+  padding: 10px 24px;
+  background-color: #1D1B25;
+  border: none;
+  color: white;
+}

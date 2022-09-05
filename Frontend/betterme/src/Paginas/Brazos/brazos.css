@@ -1,0 +1,96 @@
+.Brazos{
+    background-image: url(PantallaBrazos.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.pabrazos{
+    color: black;
+}
+.contenedorB1{
+    text-align: center;
+    position: absolute;
+    left: 30%;
+}
+.palabra1B{
+    font-size: x-large;
+}
+.botonb1{
+    width: 30%;
+    background-color: aqua;
+    color: black;
+}
+.botonb1:hover{
+    background-color: aquamarine;
+}
+.contenedorB1{
+    text-align: center;
+    position: absolute;
+    left: 16%;
+}
+.palabra1B{
+    font-size: xx-large;
+}
+.botonb1{
+    width: 30%;
+    background-color: aqua;
+    color: black;
+}
+.botonb1:hover{
+    background-color: aquamarine;
+}
+
+.contenedorB2{
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+}
+.palabra2B{
+    font-size: xx-large;
+}
+.botonb2{
+    width: 30%;
+    background-color: aqua;
+    color: black;
+}
+.botonb2:hover{
+    background-color: aquamarine;
+}
+
+.contenedorB3{
+    text-align: center;
+    position: absolute;
+    left: 16%;
+    top: 60%;
+}
+.palabra3B{
+    font-size: xx-large;
+}
+.botonb3{
+    width: 30%;
+    background-color: aqua;
+    color: black;
+}
+.botonb3:hover{
+    background-color: aquamarine;
+}
+
+.contenedorB4{
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+}
+.palabra4B{
+    font-size: x-large;
+}
+.botonb4{
+    width: 30%;
+    background-color: aqua;
+    color: black;
+}
+.botonb4:hover{
+    background-color: aquamarine;
+}

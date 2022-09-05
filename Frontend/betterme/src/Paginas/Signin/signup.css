@@ -1,0 +1,132 @@
+/* Bordered form */
+form {
+    width: 1000px;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .header{
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    margin: -5vh 0 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: solid #f1f1f1;
+  }
+    
+    /* Full-width inputs */
+    input[type=text], input[type=password] {
+      font-family: 'Roboto', sans-serif;
+      width: 100%;
+      padding: 12px 20px;
+      margin: 5px 0 25px;
+      display: inline-block;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    .greenButton{
+      margin: 2vh 0 2vh;
+      text-align: center;
+      }
+    
+    .footer{
+    margin: 25px 0 0 0;
+    }
+    
+    /* Set a style for all buttons */
+    button {
+      
+      background-color: #04AA6D;
+      color: white;
+      padding: 14px 20px;
+      margin: 0 0;
+      border: none;
+      cursor: pointer;
+      width: 25%;
+    }
+    
+    /* Add a hover effect for buttons */
+    button:hover {
+      opacity: 0.8;
+    }
+    
+    /* Extra style for the cancel button (red) */
+    .cancelbtn {
+      width: auto;
+      padding: 10px 18px;
+      background-color: #f44336;
+    }
+    
+    /* Center the avatar image inside this container */
+    .imgcontainer {
+      text-align: center;
+      margin: 24px 0 12px 0;
+    }
+    
+    /* Avatar image */
+    img.avatar {
+      width: 40%;
+      border-radius: 50%;
+    }
+    .imgr1{
+      width: 300px;
+      height: 200px;
+    }
+    .imgr2{
+      width: 300px;
+      height: 300px;
+    }
+    .parce1{
+      display: inline-block;
+      margin: 1px;
+      position: absolute;
+      left: 10%;
+      top: 50%;
+    }
+    .parce2{
+      display: inline-block;
+      margin: 1px;
+      position: absolute;
+      left: 20%;
+      top: 20%;
+    }
+    .parce3{
+      display: inline-block;
+      margin: 1px;
+      position: absolute;
+      top: -30%;
+      left: 30%;
+    }
+    /* Add padding to containers */
+    .containerr {
+      border: none !important;
+      padding: 64px;
+      font-family: 'Roboto', sans-serif;
+      width: 50%;
+      display: inline-block;
+      margin: 10px;
+    }
+    
+    /* The "Forgot password" text */
+    span.psw {
+      float: right;
+      padding-top: 16px;
+    }
+    
+    /* Change styles for span and cancel button on extra small screens */
+    @media screen and (max-width: 300px) {
+      span.psw {
+        display: block;
+        float: none;
+      }
+      .cancelbtn {
+        width: 100%;
+      }
+  
+    }

@@ -1,0 +1,174 @@
+.Ejercicios{
+    background-color: white;
+}
+.palabra{
+    color: black;
+    margin-top: -15%;
+}
+.palabra2{
+    color: black;
+    margin-top: -5%;
+}
+.primerlinea{
+    margin-top: -10%;
+}
+.container {
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    padding: 53px;
+    display: inline-block;
+    margin: 1px;
+    left: 160px;
+    top: 15%;
+}
+.container img {
+    width: 500px;
+    height: auto;
+}
+.container .pab {
+    position: absolute;
+    border: none;
+    background: none;
+    cursor: text;
+    top: 15%;
+    left: 15%;
+    font-size: xx-large;
+}
+.container .btn {
+    position: absolute;
+    top: 68%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgb(28, 58, 136);
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.container .btn:hover {
+    background-color: rgb(77, 121, 231);
+}
+.container1 {
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    padding: 53px;
+    display: inline-block;
+    margin: 1px;
+    left: 700px;
+    top: 15%;
+}
+.container1 img {
+    width: 500px;
+    height: auto;
+}
+.container1 .pab1 {
+    position: absolute;
+    border: none;
+    background: none;
+    cursor: text;
+    top: 15%;
+    left: 15%;
+    font-size: xx-large;
+}
+.container1 .btn1 {
+    position: absolute;
+    top: 68%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgb(28, 58, 136);
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.container1 .btn1:hover {
+    background-color: rgb(77, 121, 231);
+}
+.container2 {
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    padding: 53px;
+    display: inline-block;
+    margin: 1px;
+    left: 160px;
+    top: 65%;
+}
+.container2 img {
+    width: 500px;
+    height: auto;
+}
+.container2 .pab2 {
+    position: absolute;
+    border: none;
+    background: none;
+    cursor: text;
+    top: 15%;
+    left: 15%;
+    font-size: xx-large;
+}
+.container2 .btn2 {
+    position: absolute;
+    top: 85%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgb(28, 58, 136);
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.container2 .btn2:hover {
+    background-color: rgb(77, 121, 231);
+}
+.container3 {
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    padding: 53px;
+    display: inline-block;
+    margin: 1px;
+    left: 700px;
+    top: 65%;
+}
+.container3 img {
+    width: 500px;
+    height: auto;
+}
+.container3 .pab3 {
+    position: absolute;
+    border: none;
+    background: none;
+    cursor: text;
+    top: 15%;
+    left: 15%;
+    font-size: xx-large;
+}
+.container3 .btn3 {
+    position: absolute;
+    top: 85%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgb(28, 58, 136);
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.container3 .btn3:hover {
+    background-color: rgb(77, 121, 231);
+}
