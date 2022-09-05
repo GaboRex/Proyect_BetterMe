@@ -14,4 +14,18 @@ git clone https://github.com/GaboRex/Proyect_BetterMe.git
 
 _En proceso..._
 
+## Equipo ✒️
+### Scrum Master🤵:
+* Richard Rojas  - [RichyRed](https://github.com/RichyRed)
+### Product Owner👩‍💼:
+* Ximena Guzman  - [Cami7102](https://github.com/Cami7102)
+### Devs💻:
+* Pablo Badani  - *Frontend* - [Pabdro](https://github.com/Pabdro)
+* Miguel Molina  - *Frontend* - [Mickysaurio-rex](https://github.com/Mickysaurio-rex)
+* Sebastian Rojas  - *Backend* - [SebastianRojas627](https://github.com/SebastianRojas627)
+### QA👨‍🔬👩‍🔬 :
+* Paolo Illanes  - [PaoloIllanes](https://github.com/PaoloIllanes)
+* Natalia Bilbao - [NataBilbao](https://github.com/NataBilbao)
+### DevOps🤖:
+* Gabriel Neme - [GaboRex](https://github.com/GaboRex)
 
