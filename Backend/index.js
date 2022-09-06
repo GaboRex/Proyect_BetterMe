@@ -12,14 +12,19 @@ const express = require('express')
 const mysql = require('mysql')
 const cors = require('cors')
 const app = express()
+const { createHash } = require('crypto')
 
 app.use(express.json())
 app.use(cors())
 
+const hash = (string) => {
+    return createHash('sha256').update(string).digest('hex')
+}
+
 const db = mysql.createConnection({
     user: "root",
     host: "localhost",
-    password: "Alpha 627",
+    password: "copacopa",
     database: "cliente"
 })
 
@@ -28,20 +33,22 @@ app.post('/signup/register', (req, res) => {
     const nombre = req.body.nombre
     const apellido = req.body.apellido
     const username = req.body.username
-    const password = req.body.password
+    const passwordNotEncrypted = req.body.password
+    const passwordEncrypted = hash(passwordNotEncrypted)
 
     db.query("INSERT INTO usuario (nombre, apellido, username, password) VALUES (?,?,?,?)",
-    [nombre, apellido, username, password], (err, result) => {
+    [nombre, apellido, username, passwordEncrypted], (err, result) => {
         console.log(err)
     })
 })
 
 app.post('/signin/login', (req, res) => {
     const username = req.body.username
-    const password = req.body.password
+    const passwordNotEncrypted = req.body.password
+    const passwordEncrypted = hash(passwordNotEncrypted)
 
     db.query("SELECT * FROM usuario WHERE username = ? AND password = ?",
-    [username, password], 
+    [username, passwordEncrypted], 
     (err, result) => {
         if(err) {
             res.send({ err: err })

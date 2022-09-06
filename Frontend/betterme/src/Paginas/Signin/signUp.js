@@ -2,15 +2,21 @@ import './signup.css';
 import {Link} from "react-router-dom";
 import React, { useState } from 'react';
 import Axios from 'axios'
+import registro1 from './registro1.png';
+import registro2 from './registro2.png';
+import {useNavigate} from 'react-router-dom'
 
 function App() {
-
-const [nombre, setNombre] = useState('')
-const [apellido, setApellido] = useState('')
-const [username, setUsername] = useState('')
-const [password, setPassword] = useState('')
+  const navigate = useNavigate();
+const [nombre, setNombre] = useState()
+const [apellido, setApellido] = useState()
+const [username, setUsername] = useState()
+const [password, setPassword] = useState()
 
 const register = () => {
+  if(!nombre){
+    return
+  }
   Axios.post('http://localhost:3000/signup/register', {
     nombre: nombre,
     apellido: apellido,
@@ -18,14 +24,22 @@ const register = () => {
     password: password
     
   }).then((response) => {
+    navigate("/menu")
     console.log(response)
   })
 }
 
   return (
     <div className='App'>
+      <div className="parce2">
+      <img className="imgr2" src={registro1}/>
+      </div>
+      <div className="parce1">
+      <img className="imgr1" src={registro2}/>
+      </div>
+      <div className="parce3">
     <form> 
-      <div className="container">
+      <div className="containerr">
         <h1 className="header">REGISTRARSE</h1>
         <label htmlFor="name"><b>Nombre</b></label>
         <input type="text" placeholder="Ingrese su nombre" value={nombre} onChange={ (e) => { setNombre(e.target.value)}} required/>
@@ -55,6 +69,7 @@ const register = () => {
         </div>
       </div>
     </form>
+    </div>
     </div>
   );
 }

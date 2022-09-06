@@ -1,123 +1,94 @@
-/* Bordered form */
-form {
-  width: 100vw;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: none;
-}
-.login{
+/* Bordered form
+@font-face {
+  font-family: 'Helvetica Bold';
+  src: url(Helvetica-Bold-Font.ttf);
+} */
+
+
+.Login{
   background-image: url(pantallaLogIn.png);
+  height: 100vh;
+  width: 100vw;
   background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.iniSe{
+  font-family: "Helvetica Bold";
+  font-size: 35px;
+  color: black;
+}
+
+.form1{
+  background-color: rgba(255, 255, 255, 0.6);
+  margin: auto;
+  width: 500px;
+  height: 400px;
+  padding: 4.5em 3em;
+  border-radius:10px;
+  text-align: center;
+}
+
+.form_container{
+  margin-top: 3em;
+  display: grid;
+  gap: 2.5em;
+}
+
+.form_group{
+  position: relative;
+  --color: black;
+}
+
+.form_input{
+  width: 250px;
+  background: none;
+  color: black;
+  padding: .6em .3em;
   border: none;
-  height: 900px;
-  /* position: absolute; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  outline: none; 
+  border-bottom: 1px solid var(--color);
 }
-.header{
-  font-size: 50px;
-  font-family: 'Roboto', sans-serif;
-  width: 100%;
-  /* margin: -50vh 0 15vh; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #000;
-  background: solid #000;
+
+.form_input.focus + .form_label,
+.form_input:not(.placheholder-shown) + .form_label{
+  transform: translateY(-12px) scale(.7);
+  transform-origin: left top;
+  color: black;
+  font-size: 22px;
 }
-  
-  /* Full-width inputs */
-  input[type=text], input[type=password] {
-    font-family: 'Roboto', sans-serif;
-    width: 100%;
-    padding: 12px 20px;
-    margin: 5px 0 25px;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-  }
+.form_label{
+  color: black;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 120px;
+  transform: translateY(10px);
+  transition: transform .5s, color .3s;
+}
 
-  .greenButton{
-    text-align: center;
-  }
+.btn_cancelar{
+  padding: 10px 24px;
+  background-color: #ff4040;
+  border: none;
+  margin-right: 20px;
+  color: white;
+}
 
-  .footer{
-    margin: 0 0 0 0;
-  }
-  
-  /* Set a style for all buttons */
-  button {
-    background-color: #04AA6D;
-    color: white;
-    padding: 14px 20px;
-    margin: 10px 0 10px;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    width: 25%;
-  }
-  
-  /* Add a hover effect for buttons */
-  button:hover {
-    opacity: 0.8;
-  }
-  
-  /* Extra style for the cancel button (red) */
-  .cancelbtn {
-    width: auto;
-    padding: 1em 2em;
-    margin: 0 0 0 -1.3vw;
-    background-color: #f44336;
-  }
-  
-  /* Center the avatar image inside this container */
-  .imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-  }
-  
-  /* Avatar image */
-  img.avatar {
-    width: 40%;
-    border-radius: 50%;
-  }
-  
-  /* Add padding to containers */
-  .container {
-    padding: 640px;
-    font-family: 'Roboto', sans-serif;
-   width: 10px;
-   height: 600px;
-   justify-content: center; 
-   align-content: center;
-   display: grid;
-   background-color: white;
-   position: absolute;
-   top: 350px;
-   transform: translateY(-40%);
-  }
-  
-  /* The "Forgot password" text */
-  span.psw {
-    float: right;
-    padding-top: 16px;
-    font-size: 5px;
-  }
-  
-  /* Change styles for span and cancel button on extra small screens */
-  @media screen and (max-width: 300px) {
-    span.psw {
-      display: block;
-      float: none;
-    }
-    .cancelbtn {
-      width: 100%;
-    }
+.btn_iniSe{
+  padding: 10px 24px;
+  background: radial-gradient(circle, #cf2066, #27d6ae);
+  border:none;
+  margin-right: 20px;
+}
 
-  }
+.btn_crear{
+  padding: 10px 24px;
+  background-color: #1D1B25;
+  border: none;
+  color: white;
+}

@@ -16,13 +16,15 @@ h10{
 }
 img{
     height: 350px;
-    width: 300px;
+    width: 400px;
     /* margin: auto; */
 }
 .parce{
     display: inline-block;
-    margin: 90px;
+    margin: 50px;
     text-align: center;
+    height: 90%;
+    top: 90%;
 }
 h11{
     text-align: center;
