@@ -50,40 +50,12 @@ function Login() {
           <Link to="/menu">
             <button onClick={login} className="btn_iniSe">Iniciar Sesión</button>
           </Link>
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <div className="greenButton">
-      <button onClick={login}>Iniciar Sesión</button>
-      </div>
-
-      <div className="footer">
-
-        <Link to = "/">
-      <button type="button" className="cancelbtn">Cancelar</button>
-    </Link>
-    
-    <span className="psw">
-        <Link to = '/signup'>
-          
-        Crear cuenta
-      </Link>
-      </span>
-      
-      </div>
-=======
-=======
->>>>>>> 42e31b45206633606f0c36f67f57ba8ea229fb67
           <Link to='/signup'>
             <button className="btn_crear">Crear una cuenta</button>
           </Link>
         </div>
       </form>
       {/* <h1>{loginStatus}</h1> */}
-<<<<<<< HEAD
->>>>>>> 42e31b45206633606f0c36f67f57ba8ea229fb67
-=======
->>>>>>> 42e31b45206633606f0c36f67f57ba8ea229fb67
     </div>
   )
 }

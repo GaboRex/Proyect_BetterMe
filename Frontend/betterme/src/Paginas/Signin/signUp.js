@@ -5,6 +5,7 @@ import Axios from 'axios'
 import registro1 from './registro1.png';
 import registro2 from './registro2.png';
 import {useNavigate} from 'react-router-dom'
+import API from '../../config/api';
 
 function App() {
   const navigate = useNavigate();

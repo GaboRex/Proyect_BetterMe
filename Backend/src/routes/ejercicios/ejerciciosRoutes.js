@@ -14,15 +14,15 @@ routes.get("/ejercicios/:categoria", async (req, res) => {
   res.json(response);
 });
 
-// routes.get("/ejercicio/:nombre", async (req, res) => {
-//   const response = await getEjericioByNameService(req, res);
-//   res.json(response);
-// });
-
-routes.get("/ejercicio/:codigo", async (req, res) => {
-  const response = await getEjericioByIdService(req, res);
+routes.get("/ejercicio/:nombre", async (req, res) => {
+  const response = await getEjericioByNameService(req, res);
   res.json(response);
 });
+
+// routes.get("/ejercicio/:codigo", async (req, res) => {
+//   const response = await getEjericioByIdService(req, res);
+//   res.json(response);
+// });
 
 
 
