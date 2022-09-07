@@ -27,22 +27,23 @@ function Login() {
   }
 
   return (
-    <div className="Login">
-      <form className="form1">
+    <div className="fondo">
+      <form className="form">
         <h1 className="iniSe">INICIAR SESION</h1>
+
         <div className="form_container">
           <div className="form_group">
-            <input type="text" id="usuario1" className="form_input" placeholder="" required />
-            <label for="usuario1" className="form_label">Nombre de Usuario*</label>
+            <input type="text" id="usuario" className="form_input" placeholder="" required />
+            <label for="usuario" className="form_label">Nombre de Usuario*</label>
             <span className="form_line"></span>
           </div>
-          <div className="form_group">
-            <input type="password" id="clave1" className="form_input" placeholder="" required />
-            <label for="clave1" className="form_label">Clave</label>
+          <div className="form_group2">
+            <input type="password" id="clave" className="form_input" placeholder="" required />
+            <label for="clave" className="form_label">Clave</label>
             <span className="form_line"></span>
           </div>
         </div>
-        {/* <br /><br /><br /> */}
+        <br></br><br></br><br></br>
         <div className="footer1">
           <Link to="/">
             <button className="btn_cancelar">Cancelar</button>
@@ -57,7 +58,9 @@ function Login() {
         </div>
       </form>
       {/* <h1>{loginStatus}</h1> */}
+
     </div>
+
   )
 }
 export default Login;
