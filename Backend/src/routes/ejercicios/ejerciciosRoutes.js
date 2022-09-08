@@ -24,6 +24,4 @@ routes.get("/ejercicio/:nombre", async (req, res) => {
 //   res.json(response);
 // });
 
-
-
 module.exports = routes;

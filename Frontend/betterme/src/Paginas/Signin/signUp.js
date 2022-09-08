@@ -1,33 +1,30 @@
 import './signup.css';
 import {Link} from "react-router-dom";
 import React, { useState } from 'react';
-import Axios from 'axios'
 import registro1 from './registro1.png';
 import registro2 from './registro2.png';
 import {useNavigate} from 'react-router-dom'
 import API from '../../config/api';
 
 function App() {
-  const navigate = useNavigate();
+const navigate = useNavigate();
 const [nombre, setNombre] = useState()
 const [apellido, setApellido] = useState()
 const [username, setUsername] = useState()
 const [password, setPassword] = useState()
 
-const register = () => {
+const register = async () => {
   if(!nombre){
     return
   }
-  Axios.post('http://localhost:3000/signup/register', {
+
+  return await API.post('/usuario', {
     nombre: nombre,
     apellido: apellido,
     username: username,
     password: password
-    
-  }).then((response) => {
-    navigate("/menu")
-    console.log(response)
-  })
+  });
+
 }
 
   return (

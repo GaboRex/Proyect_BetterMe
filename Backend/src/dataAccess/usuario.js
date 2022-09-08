@@ -32,9 +32,9 @@ const createUsuario = (body) => {
 };
 
 const findById = (params) => {
-  const {id} = params;
+  const {username} = params;
   return new Promise((resolve, reject) => {
-    sql.query(`SELECT * FROM usuario WHERE id = ${id} `, (err, res) => {
+    sql.query(`SELECT * FROM usuario WHERE username = ${username} `, (err, res) => {
       if (err) {
         reject(err);
       }
@@ -45,8 +45,9 @@ const findById = (params) => {
 
 const findByUsernameAndPassword = (params) => {
   const { username, password } = params;
+  const encryptedPassword = hash(password)
   return new Promise((resolve, reject) => {
-    sql.query(`SELECT * FROM usuario WHERE username = ${username} && password = ${password}`, (err, res) => {
+    sql.query(`SELECT * FROM usuario WHERE username = ${username} && password = ${encryptedPassword}`, (err, res) => {
       if (err) {
         reject(err);
       }
