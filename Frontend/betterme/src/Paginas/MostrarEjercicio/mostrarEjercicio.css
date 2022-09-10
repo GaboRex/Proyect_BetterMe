@@ -54,27 +54,33 @@
     top: -50px;
 
 }
-
+.descripcionME{
+    text-align: center;
+}
 .btnAtras{
     background-color: #54BF9D;
     padding: 10px 24px;
     border: none;
     border-radius: 8px;
-    position: relative;
+    width: 100px;
+    position: absolute;
+    left: -60px;
+    top: -50px;
 }
 .btnAtras:hover{
     background-color: aquamarine;
 }
 
 .imagenEjercicio{
-    width: 70%;
+    width: 500px;
     border-radius: 10px;
+    height: 500px;
 
 }
 
 .imagenE{
     position: absolute;
-    top: 200px;
-    left: 20px;
+    top: 100px;
+    left: 100px;
 
 }

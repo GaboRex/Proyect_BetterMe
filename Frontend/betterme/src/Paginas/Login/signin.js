@@ -40,7 +40,7 @@ function Login() {
 
   return (
     <div className="Login">
-      {/* <form className="form1"> */}
+      <form className="form1">
         <h1 className="iniSe">INICIAR SESION</h1>
         <div className="form_container">
           <div className="form_group">
@@ -57,18 +57,18 @@ function Login() {
         {/* <br /><br /><br /> */}
         <div className="footer1">
           
-          {/* <Link to="/">
+          <Link to="/">
             <button className="btn_cancelar">Cancelar</button>
-          </Link> */}
+          </Link>
           
           <button onClick={login} className="btn_iniSe">Iniciar Sesión</button>
           
-          {/* <Link to='/signup'>
+          <Link to='/signup'>
             <button className="btn_crear">Crear una cuenta</button>
-          </Link> */}
+          </Link>
         </div>
-      {/* </form> */}
-      <h1>{loginStatus}</h1>
+      </form>
+      {/* <h1>{loginStatus}</h1> */}
     </div>
   )
 }

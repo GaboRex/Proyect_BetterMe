@@ -29,11 +29,13 @@ function Mostrar(){
                     <h1 className="nombreDE">{exercise.nombre}</h1>                    
                 </div>
                 <div className='informacionE'>
-                <p>{exercise.descripcion}
+                <p className="descripcionME">{exercise.descripcion}
                     </p>
                 </div>
                 <div className='btn_atras'>
+                <Link to="/ejercicios">
                     <button className='btnAtras'>Atras</button>
+                    </Link>
                 </div>
             </div>
         </div>

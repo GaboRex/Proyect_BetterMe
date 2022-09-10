@@ -23,18 +23,24 @@ const Ejercicios = () => {
                 <div className="container1">
                     <img src={piernas} />
                     <h3 className="pab1">PIERNAS</h3>
+                    <Link to="/piernas">
                     <button className="btn1">IR</button>
+                    </Link>
                 </div>
             </div>
             <div className="container2">
                 <img src={abdomen} />
                 <h3 className="pab2">ABDOMEN</h3>
+                <Link to="/abdomen">
                 <button className="btn2">IR</button>
+                </Link>
             </div>
             <div className="container3">
                 <img src={hombros} />
                 <h3 className="pab3">HOMBROS</h3>
+                <Link to="/hombros">
                 <button className="btn3">IR</button>
+                </Link>
             </div>
         </div>
     )
