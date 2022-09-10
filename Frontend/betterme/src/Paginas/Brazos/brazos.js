@@ -9,7 +9,7 @@ const Brazos = () => {
             <h1 className="pabrazos">BRAZOS</h1>
             <div className="contenedorB1">
             <p className="palabra1B"><b>Curl para biceps con barra <br/>olimpica</b></p>
-            <Link to="/mostrarEjercicio">
+            <Link to="/mostrarEjercicio/1">
             <button  type="button" class="botonb1">Explorar</button>
             </Link>
             </div>
