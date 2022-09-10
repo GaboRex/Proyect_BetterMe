@@ -17,7 +17,7 @@ function Mostrar(){
         setExercise(ejercicio[0]);
       };
       React.useEffect(() => {
-    //    getEjercicio();
+        getEjercicio();
       }, []);
     return(
         <div className="Mostrar">
