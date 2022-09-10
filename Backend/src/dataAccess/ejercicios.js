@@ -26,7 +26,7 @@ const findByCategory = (params) => {
 const findByName = (params) => {
   const {nombre} = params;
   return new Promise((resolve, reject) => {
-    sql.query(`SELECT * FROM ejercicios WHERE nombre = ${nombre}`, (err, res) => {
+    sql.query(`SELECT * FROM ejercicios WHERE id = ${nombre}`, (err, res) => {
       if (err) {
         reject(err);
       }

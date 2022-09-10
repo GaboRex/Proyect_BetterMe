@@ -1,14 +1,16 @@
 import React, { useState } from 'react'
-import {Link} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import './mostrarEjercicio.css';
 import API from '../../config/api';
 
 function Mostrar(){
     const [exercise, setExercise]=useState({
-
+    
     })
+    const params = useParams();
+    debugger
     const getEjercicio = async () => {
-        const respuesta = await API.get('/ejercicio/"Curl para bíceps con barra olímpica"');
+        const respuesta = await API.get(`/ejercicio/${params.id}`);
         const { data } = respuesta;
         const { success, message, ejercicio } = data;
         console.log(ejercicio[0].nombre);
