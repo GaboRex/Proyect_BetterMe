@@ -38,7 +38,7 @@ const register = async () => {
       <div className="parce3">
     <form> 
       <div className="containerr">
-        <h1 className="header">REGISTRARSE</h1>
+        <h1 className="headerr">REGISTRARSE</h1>
         <label htmlFor="name"><b>Nombre</b></label>
         <input type="text" placeholder="Ingrese su nombre" value={nombre} onChange={ (e) => { setNombre(e.target.value)}} required/>
 

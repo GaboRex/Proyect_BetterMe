@@ -80,8 +80,8 @@
   margin-right: 20px;
   color: white;
   position: absolute;
-  top: 480px;
-  left: 290px;
+  top: 510px;
+  left: 390px;
 }
 
 .btn_iniSe{
@@ -90,8 +90,8 @@
   border:none;
   margin-right: 20px;
   position: absolute;
-  top: 480px;
-  left: 475px;
+  top: 500px;
+  left: 580px;
 }
 
 .btn_crear{
@@ -100,6 +100,6 @@
   border: none;
   color: white;
   position: absolute;
-  top: 480px;
-  left: 665px;
+  top: 500px;
+  left: 770px;
 }
