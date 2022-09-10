@@ -19,7 +19,6 @@ const findAll = () => {
 const createUsuario = (body) => {
   const { nombre, apellido, username, password } = body;
   const encryptedPassword = hash(password)
-  // String Template
   let query = `insert into usuario (nombre, apellido, username, password) values ( '${nombre}' , '${apellido}','${username}' ,'${encryptedPassword}' );`;
   return new Promise((resolve, reject) => {
     sql.query(query, (err, res) => {
@@ -31,23 +30,11 @@ const createUsuario = (body) => {
   });
 };
 
-const findById = (params) => {
-  const {username} = params;
-  return new Promise((resolve, reject) => {
-    sql.query(`SELECT * FROM usuario WHERE username = ${username} `, (err, res) => {
-      if (err) {
-        reject(err);
-      }
-      resolve(res);
-    });
-  });
-};
-
-const findByUsernameAndPassword = (params) => {
-  const { username, password } = params;
+const findById = (body) => {
+  const { username, password } = body;
   const encryptedPassword = hash(password)
   return new Promise((resolve, reject) => {
-    sql.query(`SELECT * FROM usuario WHERE username = ${username} && password = ${encryptedPassword}`, (err, res) => {
+    sql.query("SELECT * FROM usuario WHERE username = ? AND password = ?", [username, encryptedPassword], (err, res) => {
       if (err) {
         reject(err);
       }
@@ -56,6 +43,18 @@ const findByUsernameAndPassword = (params) => {
   });
 };
 
+// const findById = (params) => {
+//   const {username} = params;
+//   return new Promise((resolve, reject) => {
+//     sql.query(`SELECT * FROM usuario WHERE username = ${username} `, (err, res) => {
+//       if (err) {
+//         reject(err);
+//       }
+//       resolve(res);
+//     });
+//   });
+// };
 
+//findByUsernameAndPassword
 
-module.exports = { findAll, createUsuario, findById, findByUsernameAndPassword};
+module.exports = { findAll, createUsuario, findById};

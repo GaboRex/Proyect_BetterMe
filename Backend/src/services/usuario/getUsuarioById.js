@@ -1,8 +1,9 @@
 const { findById } = require("../../dataAccess/usuario");
 const getUsuarioByIdService = async (req, res) => {
-  const { params } = req;
-  const usuario = await findById(params);
-  return { success: true, message: "Get User", usuario };
+  const { body } = req;
+  console.log(body);
+  const usuario = await findById(body);
+  return { usuario };
 };
 
 module.exports = getUsuarioByIdService;

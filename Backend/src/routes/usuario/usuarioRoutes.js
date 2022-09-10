@@ -9,10 +9,15 @@ routes.get("/usuarios", async (req, res) => {
   res.json(response);
 });
 
-routes.get("/usuario/:username", async (req, res) => {
+routes.post("/getUsuario", async (req, res) => {
   const response = await getUsuarioByIdService(req, res);
   res.json(response);
 });
+
+// routes.get("/usuario/:username", async (req, res) => {
+//   const response = await getUsuarioByIdService(req, res);
+//   res.json(response);
+// });
 
 // routes.get("/usuario/:username&password", async (req, res) => {
 //   const response = await getUsuarioByUsernameAndPasswordService(req, res);

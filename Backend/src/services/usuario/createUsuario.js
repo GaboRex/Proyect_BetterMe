@@ -3,7 +3,7 @@ const createUsuarioService = async (req, res) => {
   const { body } = req;
   console.log(body);
   const usuario = await createUsuario(body);
-  return { success: true, message: "Trainer was created successfully", trainer: usuario };
+  return { success: true, message: "Trainer was created successfully", user: usuario };
 };
 
 module.exports = createUsuarioService;
