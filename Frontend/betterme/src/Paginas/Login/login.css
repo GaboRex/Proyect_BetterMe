@@ -19,6 +19,8 @@
 
 .iniSe{
   font-family: "Helvetica Bold";
+  position: absolute;
+  top: 40px;
   font-size: 35px;
   color: black;
 }
@@ -45,50 +47,59 @@
 }
 
 .form_input{
-  width: 250px;
+  width: 200px;
   background: none;
   color: black;
   padding: .6em .3em;
   border: none;
   outline: none; 
-  border-bottom: 1px solid var(--color);
+  position: relative;
+  top: -40px;
+  left: 50px;
+  border-bottom: 3px solid black;
 }
 
-.form_input.focus + .form_label,
-.form_input:not(.placheholder-shown) + .form_label{
-  transform: translateY(-12px) scale(.7);
-  transform-origin: left top;
-  color: black;
-  font-size: 22px;
-}
+
+
 .form_label{
+  width: 200px;
   color: black;
   cursor: pointer;
   position: absolute;
-  top: 0;
-  left: 120px;
-  transform: translateY(10px);
-  transition: transform .5s, color .3s;
+  text-align: start;
+  top: -60px;
+  left: 50px;
+
 }
 
 .btn_cancelar{
-  padding: 10px 24px;
+  width: 140px;
   background-color: #ff4040;
   border: none;
+  text-align: center;
   margin-right: 20px;
   color: white;
+  position: absolute;
+  top: 480px;
+  left: 290px;
 }
 
 .btn_iniSe{
-  padding: 10px 24px;
+  width: 140px;
   background: radial-gradient(circle, #cf2066, #27d6ae);
   border:none;
   margin-right: 20px;
+  position: absolute;
+  top: 480px;
+  left: 475px;
 }
 
 .btn_crear{
-  padding: 10px 24px;
+  width: 140px;
   background-color: #1D1B25;
   border: none;
   color: white;
+  position: absolute;
+  top: 480px;
+  left: 665px;
 }

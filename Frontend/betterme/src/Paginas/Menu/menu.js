@@ -6,6 +6,7 @@ import menuDieta from './menuDieta.png';
 import menuEjercicios from './menuEjercicios.png';
 
 const Menu = () => {
+   
     return(
         <div className="Menu">
             <br/><br/><br/><br/><br/><br/>
