@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import './login.css';
-import Axios from 'axios'
+import API from '../../config/api';
 
 
 function Login() {
@@ -9,22 +9,34 @@ function Login() {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
 
-  const [loginStatus, setLoginStatus] = useState('')
+  const navigate = useNavigate()
+  //const [user, setUser] = useState({})
 
-  const login = () => {
-    Axios.post('http://localhost:3000/signin/login', {
+  const [loginStatus, setLoginStatus] = useState('Hello')
+
+  const login = async () => {
+    
+    try{
+    const response = await API.post('/getUsuario', {
       username: username,
       password: password
-    }).then((response) => {
-
-      if (response.data.message) {
-        setLoginStatus(response.data.message)
-      } else {
-        setLoginStatus(response.data[0].username)
-      }
     })
-
+    debugger
+    const { data } = response
+    const { usuario } = data
+    debugger
+    if(usuario.length > 0) {
+    setLoginStatus(usuario[0]?.nombre)
+    debugger
+    navigate('/menu')
+    } else {
+      setLoginStatus('Usuario o contraseña incorrectos')
+    }
+  } catch (err) {
+    console.log(err)
   }
+  }
+
 
   return (
     <div className="Login">
@@ -32,25 +44,25 @@ function Login() {
         <h1 className="iniSe">INICIAR SESION</h1>
         <div className="form_container">
           <div className="form_group">
-            <input type="text" id="usuario1" className="form_input" placeholder="" required />
+            <input type="text" id="usuario1" className="form_input" placeholder="" onChange = {(e) => {setUsername(e.target.value)}} required />
             <label for="usuario1" className="form_label">Nombre de Usuario*</label>
             <span className="form_line"></span>
           </div>
           <div className="form_group">
-            <input type="password" id="clave1" className="form_input" placeholder="" required />
+            <input type="password" id="clave1" className="form_input" placeholder="" onChange = {(e) => {setPassword(e.target.value)}} required />
             <label for="clave1" className="form_label">Clave</label>
             <span className="form_line"></span>
           </div>
         </div>
         {/* <br /><br /><br /> */}
         <div className="footer1">
+          
           <Link to="/">
             <button className="btn_cancelar">Cancelar</button>
           </Link>
-          <Link to="/menu">
-            <button onClick={login} className="btn_iniSe">Iniciar Sesión</button>
-          </Link>
-
+          
+          <button onClick={login} className="btn_iniSe">Iniciar Sesión</button>
+          
           <Link to='/signup'>
             <button className="btn_crear">Crear una cuenta</button>
           </Link>

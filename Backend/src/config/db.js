@@ -1,26 +1,28 @@
 require('dotenv').config()
+const mysql = require("mysql2");
 
-let mysql = require('mysql')
+const connection = mysql.createConnection({
+  host: process.env.HOST,
+  user: process.env.USER,
+  password: process.env.PSWR,
+  database: process.env.DATABASE,
+  port: process.env.PORT
+});
 
-//TODO change config file to environment variable
+connection.connect(function (err) {
+  if (err) {
+    return console.error("error: " + err.message);
+  }
+  console.log("Connected to the BetterMe MySQL server.");
+});
 
-let connection = mysql.createConnection({
-    host:'us-cdbr-east-06.cleardb.net',
-    user: 'b5fb25eeb450c7',
-    password: '498704be',
-    database: 'heroku_64c056bb055525b',
+// Create a pool connection
+const pool = mysql.createPool({
+  connectionLimit: 10,
+  host: process.env.HOST,
+  user: process.env.USER,
+  password: process.env.PSWR,
+  database: process.env.DATABASE
+});
 
-
-})
-
-connection.connect(function(err) {
-    if (err) {
-      return console.error('error: ' + err.message);
-    }
-  
-    console.log('Connected to the MySQL server.');
-  });
-
-
-
-module.exports = connection
+module.exports = connection;
