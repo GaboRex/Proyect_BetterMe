@@ -1,0 +1,77 @@
+.Init{
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+    background-image: url(fondoInicio.jpeg);
+    display: block;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+*{
+    -ms-overflow-style: none;
+  }
+  ::-webkit-scrollbar {
+    display: none;
+  }
+.images{
+    
+    scale: auto;
+    height: auto;
+    width: auto;
+}
+
+h1{
+    font-size: 3rem;
+    text-align: center;
+    padding: 5em 0 0 0;
+    color: white;
+    margin: -15vh 0 5vh;
+}
+h2{
+    text-align: center;
+    padding: 2em 0 0 0;
+    color: white;
+}
+h3{
+    border: white 2px solid;
+    margin-left: 45%;
+    margin-right: 45%;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+}
+h3:hover {
+    color: #fff;
+    opacity: 10;
+    background-color: coral;
+}
+a{
+    margin: 50px 20px;
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+}
+
+.botonicio{
+    text-align: center;
+    padding: 2em;
+    color: white;
+}
+.botenetro{
+    background-color: rgb(251, 124, 78, 0);
+    background-color: 255, 127, 80, 1;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.6em;
+    cursor: pointer;
+    width: 20vh;
+    border: 3px solid #f1f1f1;
+    padding: 10px 18px;
+    color: white;
+}
+
+.botenetro:hover{
+    color: black;
+    border-color: black;
+    background-color: white;
+}
