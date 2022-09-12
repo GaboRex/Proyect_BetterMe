@@ -1,18 +1,17 @@
 import './signup.css';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import React, { useState } from 'react';
 import registro1 from './registro1.png';
 import registro2 from './registro2.png';
-import { useNavigate } from 'react-router-dom'
-import API from '../../config/api';
+import API from '../../config/api'; 
 import { Field, Formik, Form } from 'formik'
 
 function validateUsuario(value) {
   let error;
   if (!value) {
     error = 'Ingrese un usuario por favor';
-  } else if (value.lenght < 6){
-    error = 'Debe contener 6 caracteres minimos'
+  } else if (!/^[a-zA-ZÀ-ÿ0-9\s]{6,15}$/.test(value)){
+    error = 'Debe contener 6 caracteres  y maximo 15';
   }
 
   return error;
@@ -22,8 +21,8 @@ function validateClave(value) {
   let error;
   if (!value) {
     error = 'Ingrese un clave por favor';
-  } else if (value.size < 8){
-    error = 'Debe contener 6 caracteres minimos'
+  } else if (!/^[a-zA-ZÀ-ÿ0-9\s]{6,15}$/.test(value)){
+    error = 'Debe contener 6 caracteres minimo y maximo 15'
   }
 
   return error;
@@ -34,8 +33,8 @@ function validateNombre(value) {
   let error;
   if (!value) {
     error = 'Ingrese un nombre por favor';
-  } else if (value.size < 6){
-    error = 'Debe contener 6 caracteres minimos'
+  } else if (!/^[a-zA-ZÀ-ÿ\s]{6,15}$/.test(value)){
+    error = 'Debe contener 6 caracteres minimo y maximo 15, por favor no ingrese numeros'
   }
   return error;
 }
@@ -44,17 +43,19 @@ function validateApellido(value) {
   let error;
   if (!value) {
     error = 'Ingrese un apellido por favor';
-  } else if (value.size < 6){
-    error = 'Debe contener 6 caracteres minimos'
+  } else if (!/^[a-zA-ZÀ-ÿ\s]{6,15}$/.test(value)){
+    error = 'Debe contener 6 caracteres minimo y maximo 15, por favor no ingrese numeros'
   }
   return error;
 }
 
-function validateClavec(value) {
+function validateClavec(value, valuec) {
   let error;
   if (!value) {
     error = 'Ingrese la clave nuevamente por favor';
-  } 
+  } else if(!/^[a-zA-ZÀ-ÿ0-9\s]{8,15}$/.test(value)){
+    error = 'Debe contener 8 caracteres minimo y maximo 15'
+  }
 
   return error;
 }
@@ -67,13 +68,20 @@ function App() {
 
   const register = async (values) => {
   
-     await API.post('/usuario', {
+    try{
+    await API.post('/usuario', {
       nombre: values.nombre,
       apellido: values.apellido,
       username: values.usuario,
       password: values.clave
-    });
+    }); 
     navigate('/menu')
+
+    
+  }catch (err) {
+    console.log(err)
+  }
+    
   }
 
   return (
