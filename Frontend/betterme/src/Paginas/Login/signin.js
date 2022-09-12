@@ -35,13 +35,10 @@ function Login() {
       username: values.usuario,
       password: values.clave
     })
-    debugger
     const { data } = response
     const { usuario } = data
-    debugger
     if(usuario.length > 0) {
     setLoginStatus(usuario[0]?.nombre)
-    debugger
     navigate('/menu')
     } else {
       setLoginStatus('Usuario o contraseña incorrectos')
