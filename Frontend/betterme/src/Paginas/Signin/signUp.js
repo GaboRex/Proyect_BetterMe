@@ -1,73 +1,142 @@
 import './signup.css';
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import React, { useState } from 'react';
 import registro1 from './registro1.png';
 import registro2 from './registro2.png';
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import API from '../../config/api';
+import { Field, Formik, Form } from 'formik'
 
-function App() {
-const navigate = useNavigate();
-const [nombre, setNombre] = useState()
-const [apellido, setApellido] = useState()
-const [username, setUsername] = useState()
-const [password, setPassword] = useState()
-
-const register = async () => {
-  if(!nombre){
-    return
+function validateUsuario(value) {
+  let error;
+  if (!value) {
+    error = 'Ingrese un usuario por favor';
+  } else if (value.lenght < 6){
+    error = 'Debe contener 6 caracteres minimos'
   }
 
-  return await API.post('/usuario', {
-    nombre: nombre,
-    apellido: apellido,
-    username: username,
-    password: password
-  });
-
+  return error;
 }
+
+function validateClave(value) {
+  let error;
+  if (!value) {
+    error = 'Ingrese un clave por favor';
+  } else if (value.size < 8){
+    error = 'Debe contener 6 caracteres minimos'
+  }
+
+  return error;
+}
+
+
+function validateNombre(value) {
+  let error;
+  if (!value) {
+    error = 'Ingrese un nombre por favor';
+  } else if (value.size < 6){
+    error = 'Debe contener 6 caracteres minimos'
+  }
+  return error;
+}
+
+function validateApellido(value) {
+  let error;
+  if (!value) {
+    error = 'Ingrese un apellido por favor';
+  } else if (value.size < 6){
+    error = 'Debe contener 6 caracteres minimos'
+  }
+  return error;
+}
+
+function validateClavec(value) {
+  let error;
+  if (!value) {
+    error = 'Ingrese la clave nuevamente por favor';
+  } 
+
+  return error;
+}
+
+
+
+function App() {
+  const navigate = useNavigate();
+
+
+  const register = async (values) => {
+  
+     await API.post('/usuario', {
+      nombre: values.nombre,
+      apellido: values.apellido,
+      username: values.usuario,
+      password: values.clave
+    });
+    navigate('/menu')
+  }
 
   return (
     <div className='App'>
       <div className="parce2">
-      <img className="imgr2" src={registro1}/>
+        <img className="imgr2" src={registro1} />
       </div>
       <div className="parce1">
-      <img className="imgr1" src={registro2}/>
+        <img className="imgr1" src={registro2} />
       </div>
       <div className="parce3">
-    <form> 
-      <div className="containerr">
-        <h1 className="headerr">REGISTRARSE</h1>
-        <label htmlFor="name"><b>Nombre</b></label>
-        <input type="text" placeholder="Ingrese su nombre" value={nombre} onChange={ (e) => { setNombre(e.target.value)}} required/>
+        <Formik
+          initialValues={{
+            nombre: '',
+            apellido: '',
+            usuario: '',
+            clave: '',
+            claveC: ''
+          }}
 
-        <label htmlFor="lname"><b>Apellido</b></label>
-        <input type="text" placeholder="Ingrese su apellido" value={apellido} onChange={ (e) => { setApellido(e.target.value)}} required/>
+          onSubmit={values => {
+            register(values);
+          }}
 
-        <label htmlFor="uname"><b>Nombre de usuario</b></label>
-        <input type="text" placeholder="Ingrese su nombre de usuario" value={username} onChange={ (e) => { setUsername(e.target.value)}} required/>
+        >
+          {({ errors, touched, isValidating }) => (
+          <Form>
+            <div className="containerr">
+              <h1 className="headerr">REGISTRARSE</h1>
+              <label htmlFor="name"><b>Nombre</b></label>
+              <Field type="text" name="nombre" validate={validateNombre} />
+                {errors.nombre && touched.nombre && <div>{errors.nombre}</div>}
 
-        <label htmlFor="psw"><b>Contraseña</b></label>
-        <input type="password" placeholder="Ingrese su contraseña" value={password} onChange={ (e) => { setPassword(e.target.value)}} required/>
+              <label htmlFor="lname"><b>Apellido</b></label>
+              <Field type="text" name="apellido" validate={validateApellido} />
+                {errors.apellido && touched.apellido && <div>{errors.apellido}</div>}
 
-        <label htmlFor="psw"><b>Confirmar contraseña</b></label>
-        <input type="password" placeholder="Ingrese su contraseña nuevamente" required/>
+              <label htmlFor="uname"><b>Nombre de usuario</b></label>
+              <Field type="text" name="usuario" validate={validateUsuario} />
+                {errors.usuario && touched.usuario && <div>{errors.usuario}</div>}
 
-        <div className="greenButton">
-          <Link to="/menu">
-        <button onClick={register}>Registrarse</button>
-        </Link>
-        </div>
+              <label htmlFor="psw"><b>Contraseña</b></label>
+              <Field type="password" name="clave" validate={validateClave} />
+                {errors.clave && touched.clave && <div>{errors.clave}</div>}
 
-        <div className="footer">
-        <Link to = "/signin">
-          <button type="button" className="cancelbtn">Cancelar</button>
-        </Link>
-        </div>
+              <label htmlFor="psw"><b>Confirmar contraseña</b></label>
+              <Field type="password" name="claveC" validate={validateClavec} />
+                {errors.claveC && touched.claveC && <div>{errors.claveC}</div>}
+
+              <div className="greenButton">
+                  <button type='submit'>Registrarse</button>
+              </div>
+
+              <div className="footer">
+                <Link to="/signin">
+                  <button type="button" className="cancelbtn">Cancelar</button>
+                </Link>
+              </div>
+            </div>
+          </Form>
+          )}
+          </Formik>
       </div>
-    </form>
-    </div>
     </div>
   );
 }
