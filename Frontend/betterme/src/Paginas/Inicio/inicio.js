@@ -1,6 +1,5 @@
 import React from 'react'
 import {Link} from "react-router-dom";
-import About from './sobreNosotros.jsx'
 import './inicio.css';
 
 const Init = () => {
@@ -15,13 +14,10 @@ const Init = () => {
         </button>
         </Link>
     </div>
-    
-    
-    <div>
-      <About />
-    </div>
-
-    
+    <br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br />
     </div>
     )
 }

@@ -34,6 +34,8 @@
     top: 15%;
     left: 15%;
     font-size: xx-large;
+    color: white;
+    -webkit-text-stroke: 1px blue;
 }
 .container .btn {
     position: absolute;
@@ -74,6 +76,8 @@
     top: 15%;
     left: 15%;
     font-size: xx-large;
+    color: white;
+    -webkit-text-stroke: 1px blue;
 }
 .container1 .btn1 {
     position: absolute;
@@ -114,6 +118,8 @@
     top: 15%;
     left: 15%;
     font-size: xx-large;
+    color: white;
+    -webkit-text-stroke: 1px blue;
 }
 .container2 .btn2 {
     position: absolute;
@@ -154,6 +160,8 @@
     top: 15%;
     left: 15%;
     font-size: xx-large;
+    color: white;
+    -webkit-text-stroke: 1px blue;
 }
 .container3 .btn3 {
     position: absolute;

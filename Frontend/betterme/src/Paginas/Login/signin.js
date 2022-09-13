@@ -7,7 +7,7 @@ import API from '../../config/api';
 function validateUsuario(value) {
   let error;
   if (!value) {
-    error = 'Required';
+    error = 'Por favor ingresa tu usuario';
   } 
   return error;
 }
@@ -74,8 +74,8 @@ function Login() {
                 <span className="form_line"></span>
               </div>
               <div className="form_group">
-                <Field name="clave" validate={validateClave} className ="form_input"/>
-                {errors.clave && touched.usuario &&<div>{errors.clave}</div>}
+                <Field type= "password" name="clave" validate={validateClave} className ="form_input"/>
+                {errors.clave && touched.clave &&<div>{errors.clave}</div>}
                 <label for="clave" className="form_label">Clave</label>
                 <span className="form_line"></span>
               </div>
@@ -97,7 +97,6 @@ function Login() {
       </Form>
       )}
       </Formik>
-      {/* <h1>{loginStatus}</h1> */}
     </div>
   )
 }
