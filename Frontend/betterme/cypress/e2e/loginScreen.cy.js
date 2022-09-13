@@ -4,12 +4,12 @@ describe('Testing login screen', () => {
   })
   it('renderizar elementos pantalla de login', () => {
     cy.contains('INICIAR SESION');
-    cy.contains('Nombre de usuario');
-    cy.contains('Contraseña');
+    cy.contains('Nombre de Usuario*');
+    cy.contains('Clave');
     cy.contains('Iniciar Sesión')
     cy.contains('Cancelar')
     //Boton de crear cuenta no esta acorede a la paleta de colores de la aplicacion, no tiene buena visibilidad
-    cy.contains('Crear cuenta')
+    cy.contains('Crear una cuenta')
     //Espacio en blanco en la parte inferior de la pagina de login
 
 
@@ -21,5 +21,22 @@ describe('Testing login screen', () => {
     cy.contains('INICIAR');
 
   })
+
+  it('login con usuario inexistente ', () => {
+    cy.get('input[name="usuario"]').type("@");
+    cy.get('input[name="clave"]').type("@");
+    cy.contains('Crear una cuenta').click();
+    //cy.contains('Iniciar Sesión')
+
+  })
+  it('login con usuario existente ', () => {
+    cy.get('input[name="usuario"]').type("@");
+    cy.get('input[name="clave"]').type("@");
+    cy.contains('Crear una cuenta').click();
+    //cy.contains('REGISTRATE')
+
+  })
+
+
 
 })
